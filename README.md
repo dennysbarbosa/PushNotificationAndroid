@@ -10,8 +10,11 @@ Os componentes envolvidos são:
 
 
 • Dispositivo móvel: é o aparelho (smartphone ou tablet) que está rodando a aplicação Android. Ele deve usar a versão 2.2 ou superior e que tenha o Google Play instalado. Alternativamente podemos usar o emulador com as Google APIs;
+
 • Servidores GCM do Google: recebem as mensagens da aplicação servidora e as entrega aos dispositivos registrados;
+
 • Aplicação servidora: é a aplicação que recebe o registro do dispositivo móvel, armazena o seu id, e envia informações para eles através dos servidores GCM.
+
 O segundo elemento da arquitetura, as credenciais, são identificadores e chaves utilizadas pelos componentes durante os diversos estágios do processo de registro e comunicação da aplicação servidora com o dispositivo móvel.
 
 
@@ -37,8 +40,11 @@ Editando o manisfest:
 
 
 • com.google.android.c2dm.permission.RECEIVE – para usarmos o serviço GCM;
+
 • android.permission.INTERNET – para usarmos a comunicação com a Web;
+
 • android.permission.GET_ACCOUNTS – para obter informações da conta do usuário do aparelho (apenas para versões anteriores à 4.0.4);
+
 • android.permission.WAKE_LOCK – para despertar o aparelho caso ele esteja inativo ao chegar uma mensagem.
 
 
